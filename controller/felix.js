@@ -14,8 +14,11 @@ const felixGet = (req,res) => {
 
 const felixCreate = (req,res) => {
     const felix = new Felix({
+        nama : req.body.nama,
         alamat : req.body.alamat,
-        genre_pariwisata : req.body.genre_pariwisata
+        genre_pariwisata : req.body.genre_pariwisata,
+        maksimal_kapasitas : req.body.maksimal_kapasitas,
+        pemilik : req.body.pemilik,
     });
 
     felix.save().then((result) => {
